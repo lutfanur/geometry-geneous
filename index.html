@@ -24,20 +24,41 @@
           <figure><img src="images/triangle.png" alt="Shoes" /></figure>
           <div class="card-body">
             <h2 class="card-title">Triangle</h2>
-            <p class="text-center ">Area(A) = 0.5 * b * h </p>
+            <p class="text-center text-3xl ">Area(A) = 0.5 * b * h </p>
             <div >
-              <input class="w-24 bg-slate-100 text-2xl p-2 rounded-lg" type="text" placeholder="b">
+              <input id="triangle-base" class="w-24 bg-slate-100 text-2xl p-2 rounded-lg" type="text" placeholder="b">
               <span class="mr-4 ml-2">cm</span>
-              <input class="w-24 bg-slate-100 text-2xl p-2 rounded-lg" type="text" placeholder="h">
+              <input class="w-24 bg-slate-100 text-2xl p-2 rounded-lg" type="text" id="triangle-height" placeholder="h">
               <span>cm</span>
-
-
             </div>
+            <div>
+              <p class="text-2xl">Area: <span id="triangle-area"></span> <span>cm <sup>2</sup></span></p>
+            </div>
+
             <div class="card-actions">
               <button onclick="calculateTriangleArea()" class="btn btn-primary w-full">Calculate</button>
             </div>
           </div>
         </div>
+        <!-- Rectangle card -->
+        <div class="card w-96 bg-base-100 shadow-xl">
+          <figure><img src="images/rectangle.png" alt="Rectangle" /></figure>
+          <div class="card-body">
+            <h2 class="card-title">Rectangle</h2>
+            <p>Area (A) = w * l</p>
+            <div>
+              <!-- rectangle width -->
+              <input class="w-24 bg-slate-100 text-2xl p-2 rounded-lg" type="text" placeholder="width"><span>cm</span>
+              <!-- rectangle height-->
+              <input class="w-24 bg-slate-100 text-2xl p-2 rounded-lg" type="text" placeholder="length"><span>cm</span>
+            </div>
+            <div class="card-actions">
+              <button onclick="calculateRectangleArea()" class="btn btn-primary w-full">Calculate</button>
+            </div>
+          </div>
+        </div>
+
+
         <!-- Triangle card -->
         <div class="card w-96 bg-base-100 shadow-xl">
           <figure><img src="https://daisyui.com/images/stock/photo-1606107557195-0e29a4b5b4aa.jpg" alt="Shoes" />
@@ -82,6 +103,7 @@
     </div>
   </main>
   <script src="scripts/triangle-calculate.js"></script>
+  <script src="scripts/rectangle-area.js"></script>
 </body>
 
 </html>
